@@ -1,0 +1,198 @@
+/*
+ * Optum Serve Design System — Global CSS Variables
+ * Import once at root: import '@optum-serve/ds/tokens/globals.css'
+ */
+
+:root {
+  /* ── Brand: Orange ──────────────────────── */
+  --os-orange-50:  #FFF0EB;
+  --os-orange-100: #FFD5C5;
+  --os-orange-200: #FFB09A;
+  --os-orange-300: #FF8A6B;
+  --os-orange-400: #FF6F47;
+  --os-orange-500: #FF612B;
+  --os-orange-600: #E8501C;
+  --os-orange-700: #CC4D22;
+  --os-orange-800: #A63E1A;
+  --os-orange-900: #7A2D0F;
+
+  /* ── Brand: Navy ────────────────────────── */
+  --os-navy-50:  #E8EBF0;
+  --os-navy-100: #C5CDD9;
+  --os-navy-300: #738EA7;
+  --os-navy-500: #2D4068;
+  --os-navy-600: #1A2B4A;
+  --os-navy-800: #0E1928;
+  --os-navy-900: #080F18;
+
+  /* ── Brand: Blue ────────────────────────── */
+  --os-blue-50:  #E6F2FA;
+  --os-blue-100: #B5D4F4;
+  --os-blue-300: #4F96DE;
+  --os-blue-500: #0067B1;
+  --os-blue-700: #004780;
+  --os-blue-900: #002550;
+
+  /* ── Extended ───────────────────────────── */
+  --os-teal-50:  #E0F5F4;
+  --os-teal-500: #00837A;
+  --os-teal-700: #005C56;
+
+  --os-green-50:  #EDF7EE;
+  --os-green-500: #2E7D32;
+  --os-green-700: #1B5E20;
+
+  --os-amber-50:  #FFF3E0;
+  --os-amber-500: #E65100;
+  --os-amber-700: #BF360C;
+
+  --os-red-50:  #FEECEC;
+  --os-red-500: #C62828;
+  --os-red-700: #B71C1C;
+
+  /* ── Neutrals ───────────────────────────── */
+  --os-gray-0:   #FFFFFF;
+  --os-gray-50:  #F8F9FA;
+  --os-gray-100: #F1F3F5;
+  --os-gray-200: #E9ECEF;
+  --os-gray-300: #DEE2E6;
+  --os-gray-400: #ADB5BD;
+  --os-gray-500: #868E96;
+  --os-gray-600: #6C757D;
+  --os-gray-700: #495057;
+  --os-gray-800: #343A40;
+  --os-gray-900: #212529;
+
+  /* ── Semantic: Actions ──────────────────── */
+  --os-color-action:       var(--os-orange-500);
+  --os-color-action-hover: var(--os-orange-700);
+  --os-color-action-light: var(--os-orange-50);
+  --os-color-action-dark:  var(--os-orange-800);
+
+  /* ── Semantic: Link / Info ──────────────── */
+  --os-color-link:         var(--os-blue-500);
+  --os-color-link-hover:   var(--os-blue-700);
+  --os-color-info:         var(--os-blue-500);
+  --os-color-info-light:   var(--os-blue-50);
+  --os-color-info-border:  var(--os-blue-100);
+
+  /* ── Semantic: Status ───────────────────── */
+  --os-color-success:        var(--os-green-500);
+  --os-color-success-light:  var(--os-green-50);
+  --os-color-warning:        var(--os-amber-500);
+  --os-color-warning-light:  var(--os-amber-50);
+  --os-color-error:          var(--os-red-500);
+  --os-color-error-light:    var(--os-red-50);
+
+  /* ── Semantic: Text ─────────────────────── */
+  --os-text-primary:   var(--os-gray-900);
+  --os-text-secondary: var(--os-gray-600);
+  --os-text-tertiary:  var(--os-gray-400);
+  --os-text-inverse:   #FFFFFF;
+  --os-text-link:      var(--os-blue-500);
+  --os-text-action:    var(--os-orange-700);
+
+  /* ── Semantic: Surfaces ─────────────────── */
+  --os-bg-page:      var(--os-gray-50);
+  --os-bg-card:      var(--os-gray-0);
+  --os-bg-secondary: var(--os-gray-100);
+  --os-bg-nav:       var(--os-navy-600);
+
+  /* ── Semantic: Borders ──────────────────── */
+  --os-border-default: var(--os-gray-300);
+  --os-border-subtle:  var(--os-gray-200);
+  --os-border-focus:   var(--os-orange-500);
+  --os-border-error:   var(--os-red-500);
+
+  /* ── Spacing (4px base) ─────────────────── */
+  --os-space-1:   4px;
+  --os-space-2:   8px;
+  --os-space-3:   12px;
+  --os-space-4:   16px;
+  --os-space-5:   20px;
+  --os-space-6:   24px;
+  --os-space-8:   32px;
+  --os-space-10:  40px;
+  --os-space-12:  48px;
+  --os-space-16:  64px;
+
+  /* ── Border radius ──────────────────────── */
+  --os-radius-xs:   2px;
+  --os-radius-sm:   4px;
+  --os-radius-md:   8px;
+  --os-radius-lg:   12px;
+  --os-radius-xl:   16px;
+  --os-radius-pill: 9999px;
+
+  /* ── Shadows ────────────────────────────── */
+  --os-shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --os-shadow-sm: 0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06);
+  --os-shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --os-shadow-lg: 0 10px 15px rgba(0,0,0,0.07), 0 4px 6px rgba(0,0,0,0.05);
+  --os-shadow-focus:       0 0 0 3px rgba(255, 97, 43, 0.25);
+  --os-shadow-focus-error: 0 0 0 3px rgba(198, 40, 40, 0.20);
+
+  /* ── Typography ─────────────────────────── */
+  --os-font-sans:  'OptumSans', 'Helvetica Neue', Arial, sans-serif;
+  --os-font-mono:  'SF Mono', 'Fira Code', monospace;
+
+  --os-text-2xs: 0.694rem;
+  --os-text-xs:  0.778rem;
+  --os-text-sm:  0.875rem;
+  --os-text-md:  1rem;
+  --os-text-lg:  1.125rem;
+  --os-text-xl:  1.266rem;
+  --os-text-2xl: 1.424rem;
+  --os-text-3xl: 1.602rem;
+  --os-text-4xl: 1.802rem;
+  --os-text-5xl: 2.027rem;
+
+  /* ── Transitions ────────────────────────── */
+  --os-transition-fast:   100ms ease;
+  --os-transition-normal: 150ms ease;
+  --os-transition-slow:   250ms ease;
+
+  /* ── Z-index ────────────────────────────── */
+  --os-z-dropdown: 100;
+  --os-z-sticky:   200;
+  --os-z-overlay:  300;
+  --os-z-modal:    400;
+  --os-z-toast:    500;
+  --os-z-tooltip:  600;
+}
+
+/* ── Base reset & defaults ──────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--os-font-sans);
+  font-size:   var(--os-text-md);
+  font-weight: 400;
+  line-height: 1.6;
+  color:       var(--os-text-primary);
+  background:  var(--os-bg-page);
+  -webkit-font-smoothing:  antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus visible (accessibility) ─────── */
+:focus-visible {
+  outline: 2px solid var(--os-color-action);
+  outline-offset: 2px;
+}
+
+/* ── Reduced motion ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:   0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration:  0.01ms !important;
+  }
+}

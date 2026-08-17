@@ -1,0 +1,37 @@
+{
+  "name": "@optum-serve/ds",
+  "version": "1.0.0",
+  "description": "Optum Serve Design System for React web apps — tokens, components, hooks",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens": "./src/tokens/index.ts",
+    "./globals.css": "./src/tokens/globals.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "optum",
+    "optum-serve",
+    "design-system",
+    "react",
+    "tailwind",
+    "federal-health",
+    "veterans"
+  ],
+  "license": "UNLICENSED"
+}
