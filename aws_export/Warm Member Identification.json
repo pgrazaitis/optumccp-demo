@@ -1,0 +1,466 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "set-voice",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "set-voice": {
+        "position": {
+          "x": 180,
+          "y": 40
+        },
+        "parameters": {
+          "TextToSpeechVoice": {
+            "languageCode": "en-US"
+          }
+        },
+        "overrideConsoleVoice": true
+      },
+      "success": {
+        "position": {
+          "x": 1460,
+          "y": 40
+        }
+      },
+      "bd92f550-d6dc-4dc3-afd8-1a411e8df8a8": {
+        "position": {
+          "x": 434.4,
+          "y": 42.4
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "CaptureMember",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "GetCallerName"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "GetCallerName",
+        "lexV2BotAliasName": "CaptureMember",
+        "conditionMetadata": [
+          {
+            "id": "abf8954f-2717-46fd-b8f2-8bfb56260cca",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CaptureName"
+          }
+        ]
+      },
+      "3bc4de3a-5c08-4e72-86ad-796f7bf233a5": {
+        "position": {
+          "x": 496,
+          "y": 306.4
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "CaptureMember",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "GetCallerName"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "GetCallerName",
+        "lexV2BotAliasName": "CaptureMember",
+        "conditionMetadata": [
+          {
+            "id": "0f02af6e-1164-492d-bfb5-ab7ba8ac8489",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CaptureName"
+          }
+        ]
+      },
+      "2922cbbd-dca4-4bc1-808b-60447b750090": {
+        "position": {
+          "x": 1201.6,
+          "y": 285.6
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "CaptureMemberId",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "CaptureMemberId"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "CaptureMemberId",
+        "lexV2BotAliasName": "CaptureMemberId",
+        "conditionMetadata": [
+          {
+            "id": "30ea4f25-910b-43d7-89e8-9df4fa1ca8e1",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CaptureMemberId"
+          }
+        ]
+      },
+      "save-name": {
+        "position": {
+          "x": 680,
+          "y": 40
+        },
+        "dynamicParams": []
+      },
+      "a8cd5b69-ce6a-45c9-ab5a-feae21e06cf9": {
+        "position": {
+          "x": 941.6,
+          "y": 40.8
+        },
+        "parameters": {
+          "LexV2Bot": {
+            "AliasArn": {
+              "displayName": "CaptureMemberId",
+              "useLexBotDropdown": true,
+              "lexV2BotName": "CaptureMemberId"
+            }
+          }
+        },
+        "useLexBotDropdown": true,
+        "lexV2BotName": "CaptureMemberId",
+        "lexV2BotAliasName": "CaptureMemberId",
+        "conditionMetadata": [
+          {
+            "id": "388bbe9d-d168-41dd-ae8a-14c4e65153ca",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CaptureMemberId"
+          }
+        ]
+      },
+      "save-member-id": {
+        "position": {
+          "x": 1200,
+          "y": 40
+        },
+        "dynamicParams": []
+      },
+      "error-message": {
+        "position": {
+          "x": 1460,
+          "y": 260
+        }
+      },
+      "disconnect": {
+        "position": {
+          "x": 2268.8,
+          "y": 171.2
+        }
+      },
+      "b37458f7-d3ef-4900-ab1b-c7d632c1d78b": {
+        "position": {
+          "x": 1710.4,
+          "y": 34.4
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "BasicQueue"
+          }
+        },
+        "queue": {
+          "text": "BasicQueue"
+        }
+      },
+      "8e5e2798-ead1-4cec-8bcd-e1a42ec3ce5a": {
+        "position": {
+          "x": 1969.6,
+          "y": 84.8
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "Warm Member Identification",
+    "description": "Greets caller, captures caller name and member ID using Amazon Lex V2, and persists them as callerName and memberId contact attributes.",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Joanna",
+        "TextToSpeechEngine": "Neural",
+        "TextToSpeechStyle": "None"
+      },
+      "Identifier": "set-voice",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "bd92f550-d6dc-4dc3-afd8-1a411e8df8a8",
+        "Errors": [
+          {
+            "NextAction": "bd92f550-d6dc-4dc3-afd8-1a411e8df8a8",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "Perfect, thank you $.Attributes.callerName. I have your information and will get you to the right place."
+      },
+      "Identifier": "success",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "b37458f7-d3ef-4900-ab1b-c7d632c1d78b",
+        "Errors": [
+          {
+            "NextAction": "b37458f7-d3ef-4900-ab1b-c7d632c1d78b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Hi, and thanks for calling. I'm glad you're here. To get started, please tell me your name. For example, you can say, my name is Alex.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws-us-gov:lex:us-gov-west-1:493938986683:bot-alias/LBBGSLEAKU/RUENMHYWUB"
+        }
+      },
+      "Identifier": "bd92f550-d6dc-4dc3-afd8-1a411e8df8a8",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "error-message",
+        "Conditions": [
+          {
+            "NextAction": "save-name",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CaptureName"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "3bc4de3a-5c08-4e72-86ad-796f7bf233a5",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "I didn't quite catch that. Please tell me your name. You can say, my name is Alex.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws-us-gov:lex:us-gov-west-1:493938986683:bot-alias/LBBGSLEAKU/RUENMHYWUB"
+        }
+      },
+      "Identifier": "3bc4de3a-5c08-4e72-86ad-796f7bf233a5",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "error-message",
+        "Conditions": [
+          {
+            "NextAction": "save-name",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CaptureName"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "I didn't get that member I D. Please enter it on your keypad and press pound, or say the number aloud.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws-us-gov:lex:us-gov-west-1:493938986683:bot-alias/XKYV1TIOYC/VZ9WOEVLJN"
+        }
+      },
+      "Identifier": "2922cbbd-dca4-4bc1-808b-60447b750090",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "error-message",
+        "Conditions": [
+          {
+            "NextAction": "save-member-id",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CaptureMemberId"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "callerName": "$.Lex.Slots.CallerName"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "save-name",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "a8cd5b69-ce6a-45c9-ab5a-feae21e06cf9",
+        "Errors": [
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Thank you. Now, please enter your member I D using your phone keypad, followed by the pound sign, or say your member I D aloud.",
+        "LexV2Bot": {
+          "AliasArn": "arn:aws-us-gov:lex:us-gov-west-1:493938986683:bot-alias/XKYV1TIOYC/VZ9WOEVLJN"
+        }
+      },
+      "Identifier": "a8cd5b69-ce6a-45c9-ab5a-feae21e06cf9",
+      "Type": "ConnectParticipantWithLexBot",
+      "Transitions": {
+        "NextAction": "error-message",
+        "Conditions": [
+          {
+            "NextAction": "save-member-id",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "CaptureMemberId"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "2922cbbd-dca4-4bc1-808b-60447b750090",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "memberId": "$.Lex.Slots.MemberId"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "save-member-id",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "success",
+        "Errors": [
+          {
+            "NextAction": "error-message",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "SkipWhenDTMFBufferEnabled": "false",
+        "Text": "I'm sorry, I'm having trouble collecting that information right now. Please hold while we continue."
+      },
+      "Identifier": "error-message",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "b37458f7-d3ef-4900-ab1b-c7d632c1d78b",
+        "Errors": [
+          {
+            "NextAction": "b37458f7-d3ef-4900-ab1b-c7d632c1d78b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "disconnect",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws-us-gov:connect:us-gov-west-1:493938986683:instance/09bf10db-0750-4a05-af93-3f0332853ef1/queue/f3725b53-5d43-4e92-9c70-8400045f54f7"
+      },
+      "Identifier": "b37458f7-d3ef-4900-ab1b-c7d632c1d78b",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "8e5e2798-ead1-4cec-8bcd-e1a42ec3ce5a",
+        "Errors": [
+          {
+            "NextAction": "8e5e2798-ead1-4cec-8bcd-e1a42ec3ce5a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "8e5e2798-ead1-4cec-8bcd-e1a42ec3ce5a",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "disconnect",
+        "Errors": [
+          {
+            "NextAction": "disconnect",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "disconnect",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}
